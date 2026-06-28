@@ -1,3 +1,45 @@
+# UAS_PEMOGRAMAN_MOBILE-1
+
+# Nama:Raihan Ardiansyah
+
+# Nim: 312410396
+
+# Kelas: TI.24.A.3
+
+# Mata Kuliah: Pemograman Mobile 1
+
+# Projeck Android: Aplikasi ToDoList
+
+**Berikut alur dari pembuatan aplikasinya**
+
+1. Membuat story board
+
+<img src="UAS/gambar1.png" width="700">
+
+2. WireFrame
+
+<img src="UAS/gambar2.png" width="700">
+
+3. Mockup
+
+<img src="UAS/gambar3.png" width="700">
+
+4. UI dan UX
+
+<img src="UAS/gambar4.png" width="700">
+
+5. ClickUp
+
+<img src="UAS/gambar5.png" width="700">
+
+ini Link ClickUpnya: https://app.clickup.com/90181811659/v/s/901810066212
+
+**Dan ini hasil akhir dari aplikasi yang saya buat**
+
+**Link Youtube**
+
+* Aplikasi Berjalan: https://youtube.com/shorts/n0bgM10qOUw?si=cnddOi3fcHcUpz4L 
+
 # TiitipSampah (GreenBin App) ☘️♻️
 
 **TiitipSampah** adalah aplikasi berbasis Android yang dirancang untuk mempermudah manajemen dan penjemputan sampah secara cerdas, cepat, dan terintegrasi. Proyek ini dikembangkan menggunakan **Java** dan **Android Studio** sebagai bagian dari tugas akademik di Universitas Pelita Bangsa.
