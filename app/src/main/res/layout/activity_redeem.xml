@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_redeem"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    tools:context=".RedeemActivity">
+
+    <!-- ================== HEADER AREA ================== -->
+    <RelativeLayout
+        android:id="@+id/rlHeaderRedeem"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#528265"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivBackRedeem"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:src="@android:drawable/ic_menu_revert"
+            app:tint="#FFFFFF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Tukar Poin GreenBin"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <!-- ================== CARD SALDO POIN CURRENT ================== -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardPoinInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:cardBackgroundColor="#E8F5E9"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        app:layout_constraintTop_toBottomOf="@id/rlHeaderRedeem">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Poin Kamu Saat Ini 🌱"
+                android:textColor="#2D5A27"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvCurrentPoin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="1.250 XP"
+                android:textColor="#1B4D22"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvPilihMetode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Pilih Metode Penukaran Uang"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardPoinInfo" />
+
+    <!-- ================== LIST PILIHAN REDEEM ================== -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="20dp"
+        app:layout_constraintTop_toBottomOf="@id/tvPilihMetode"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="24dp">
+
+            <!-- Opsi 1: Gopay -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnRedeemGopay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+                <RelativeLayout android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@+id/lblGopay" android:text="Saldo GOPAY Rp 50.000" android:textStyle="bold" android:textColor="#333333" android:textSize="15sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:layout_below="@id/lblGopay" android:text="Biaya: 500 Poin" android:textColor="#528265" android:textSize="13sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:layout_alignParentEnd="true" android:layout_centerInParent="true" android:text="TUKAR" android:textColor="#32BE4B" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Opsi 2: OVO -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnRedeemOvo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+                <RelativeLayout android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@+id/lblOvo" android:text="Saldo OVO Rp 50.000" android:textStyle="bold" android:textColor="#333333" android:textSize="15sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:layout_below="@id/lblOvo" android:text="Biaya: 500 Poin" android:textColor="#528265" android:textSize="13sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:layout_alignParentEnd="true" android:layout_centerInParent="true" android:text="TUKAR" android:textColor="#32BE4B" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Opsi 3: Dana -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnRedeemDana"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+                <RelativeLayout android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@+id/lblDana" android:text="Saldo DANA Rp 100.000" android:textStyle="bold" android:textColor="#333333" android:textSize="15sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:layout_below="@id/lblDana" android:text="Biaya: 1000 Poin" android:textColor="#528265" android:textSize="13sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:layout_alignParentEnd="true" android:layout_centerInParent="true" android:text="TUKAR" android:textColor="#32BE4B" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Opsi 4: Token Listrik -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnRedeemToken"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp">
+                <RelativeLayout android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:id="@+id/lblToken" android:text="Voucher Token Listrik PLN" android:textStyle="bold" android:textColor="#333333" android:textSize="15sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:layout_below="@id/lblToken" android:text="Biaya: 200 Poin" android:textColor="#528265" android:textSize="13sp" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                    <TextView android:layout_alignParentEnd="true" android:layout_centerInParent="true" android:text="TUKAR" android:textColor="#32BE4B" android:textStyle="bold" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
